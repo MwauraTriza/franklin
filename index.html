@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Frank 🎉</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #1e1e2f, #3a0ca3);
+    color: white;
+    overflow: hidden;
+}
+
+/* Top images (NOW MUCH BIGGER) */
+.top-img {
+    position: absolute;
+    top: 30px;
+    width: 200px;   /* BIGGER */
+    height: 500px;  /* BIGGER */
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.top-left {
+    left: 30px;
+}
+
+.top-right {
+    right: 30px;
+}
+
+/* Floating balloons */
+.balloon {
+    position: absolute;
+    bottom: -100px;
+    width: 50px;
+    height: 70px;
+    border-radius: 50%;
+    animation: float 6s infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-120vh); }
+}
+
+/* Main content */
+.container {
+    position: relative;
+    top: 22vh;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    background: #ff4d6d;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ff1e4d;
+}
+
+#surprise {
+    display: none;
+    margin-top: 20px;
+    font-size: 20px;
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Top Images -->
+<img src="triza/IMG20240804073536.jpg" class="top-img top-left">
+<img src="triza/Snapchat-243715268.jpg" class="top-img top-right">
+
+<!-- Balloons -->
+<div class="balloon" style="left:10%; background:#ff4d6d; animation-delay:0s;"></div>
+<div class="balloon" style="left:30%; background:#ffd60a; animation-delay:2s;"></div>
+<div class="balloon" style="left:50%; background:#4cc9f0; animation-delay:4s;"></div>
+<div class="balloon" style="left:70%; background:#80ed99; animation-delay:1s;"></div>
+<div class="balloon" style="left:90%; background:#ff85a1; animation-delay:3s;"></div>
+
+<div class="container">
+    <h1>🎉 Happy Birthday Franklin! 🎉</h1>
+    <p>You’re not just my brother… you’re my best friend 💯</p>
+
+    <button onclick="showSurprise()">Click for Surprise 🎁</button>
+
+    <div id="surprise">
+        🎂 Happy Birthday Franklin!<br><br>
+        Wishing you more life, more wins, and endless happiness!<br>
+        Stay awesome 🔥🔥🔥<br><br>
+        Love you bro ❤️<br>
+        You are the best! 🎉🎉🎉<br>
+        Cheers to many more years! 🥂<br><br>
+
+        <strong>From your loving sister ❤️</strong>
+    </div>
+</div>
+
+<!-- Music -->
+<audio id="bgMusic" loop>
+    <source src="Let King Tonka Talk (feat. King Kylie).mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function showSurprise() {
+    document.getElementById("surprise").style.display = "block";
+
+    var music = document.getElementById("bgMusic");
+    music.volume = 0.5;
+    music.play();
+}
+</script>
+
+</body>
+</html>
